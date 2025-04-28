@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Profile Card</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-card">
+            <div class="card-header">
+                <div class="slideshow-container">
+                    <div class="slide active">
+                        <img src="Images/home-prof.png" alt="Profile Image 1">
+                    </div>
+                    <div class="slide">
+                        <img src="Images/about-prof.png" alt="Profile Image 2">
+                    </div>
+                    <div class="slide">
+                        <img src="Images/about-prof.png" alt="Profile Image 3">
+                    </div>
+                    <button class="prev-btn">❮</button>
+                    <button class="next-btn">❯</button>
+                </div>
+                <h2 class="profile-name">Interactive Profile</h2>
+                <p class="profile-title">Web Developer</p>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="about">About</button>
+                    <button class="tab-btn" data-tab="contact">Contact</button>
+                    <button class="tab-btn" data-tab="settings">Settings</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-panel active" id="about">
+                        <p>Welcome to my interactive profile card! This project demonstrates various interactive elements including event handling, form validation, and more.</p>
+                        <p>Try clicking buttons, hovering elements, and exploring the hidden features!</p>
+                        <button class="theme-toggle">Change Theme</button>
+                    </div>
+                    
+                    <div class="tab-panel" id="contact">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required>
+                                <span class="validation-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required>
+                                <span class="validation-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" id="password" required>
+                                <span class="validation-message"></span>
+                            </div>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                    
+                    <div class="tab-panel" id="settings">
+                        <h3>Settings Panel</h3>
+                        <p>This is where settings would go in a real application.</p>
+                        <div class="accordion">
+                            <div class="accordion-item">
+                                <div class="accordion-header">Display Settings</div>
+                                <div class="accordion-content">
+                                    <p>Change how the profile appears.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-item">
+                                <div class="accordion-header">Privacy Settings</div>
+                                <div class="accordion-content">
+                                    <p>Manage your privacy options.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card-footer">
+                <p>Press "k" for a keyboard shortcut surprise!</p>
+                <p class="secret-tip">Try double-clicking the profile name!</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
